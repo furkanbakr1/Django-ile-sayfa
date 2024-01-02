@@ -1,0 +1,145 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Furkan Bakır
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+            <div class="card col-6" style="width: 18rem;">
+                <img src="/media/xawDTKHO_2x.jpg" class="card-img-top" alt="...">
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            İsmail Sağırdak
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Melih Esen
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Enes Tuksal
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingSix">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              Ferhat Saygın
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Ahmet Kaplan
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-header" id="headingEight">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              Tencere Kapak
+            </button>
+          </h2>
+        </div>
+        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Bilgisayar Programcılığı</p>
+            <p>2. sınıf</p>
+            <p>22 yaşında</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<br><br><br><br><br>
+
+
+<H3>Burası DB'e Resim Yükleme Alanıdır.</H3>
+
+<form method="POST" enctype="multipart/form-data" class="my-form">
+  {% csrf_token %}
+  <div class="form-group">
+      <label for="id_resim">Resim Seçin:</label>
+      <input type="file" id="id_resim" name="resim" class="form-control-file">
+  </div>
+  <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
+
+{% endblock body %}
